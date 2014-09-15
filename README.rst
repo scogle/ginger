@@ -2,6 +2,8 @@
  Running SPARQLginger
 =====================
 
+NOT EVEN CLOSE TO WORKING YET
+
 SPARQLginger is a utility to generate dynamic HTML sites from SPARQL queries.  Add some spice to your SPARQL!
 
 Usage
