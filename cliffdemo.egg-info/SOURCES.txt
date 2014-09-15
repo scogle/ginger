@@ -1,0 +1,16 @@
+README.rst
+setup.py
+cliffdemo/__init__.py
+cliffdemo/encoding.py
+cliffdemo/list.py
+cliffdemo/main.py
+cliffdemo/show.py
+cliffdemo/simple.py
+cliffdemo.egg-info/PKG-INFO
+cliffdemo.egg-info/SOURCES.txt
+cliffdemo.egg-info/dependency_links.txt
+cliffdemo.egg-info/entry_points.txt
+cliffdemo.egg-info/namespace_packages.txt
+cliffdemo.egg-info/not-zip-safe
+cliffdemo.egg-info/requires.txt
+cliffdemo.egg-info/top_level.txt
