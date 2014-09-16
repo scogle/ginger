@@ -42,7 +42,11 @@ setup(
     scripts=[],
 
     provides=[],
-    install_requires=['cliff'],
+    install_requires=[
+        'cliff',
+        'sass',
+        'jinja2'
+    ],
 
     namespace_packages=[],
     packages=find_packages(),
@@ -66,12 +70,12 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'ginger = SPARQLginger.main:main'
+            'ginger = ginger.main:main'
         ],
         'ginger': [
-            'new = SPARQLginger.create:Create',
-            'build = SPARQLginger.build:Build',
-            'serve = SPARQLginger.serve:Serve'
+            'new = ginger.create:Create',
+            'build = ginger.build:Build',
+            'serve = ginger.serve:Serve'
         ]
     },
 
