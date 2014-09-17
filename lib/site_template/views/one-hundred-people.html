@@ -1,0 +1,28 @@
+---
+title: "One Hundred People"
+description: >
+	One hundred instances of foaf:Person randomly selected from DBPedia.
+
+endpoint: "http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fperson+%3Fbirth+%3Fdeath+where+{%3Fperson+a+foaf%3APerson+.+%3Fperson+dbpedia-owl%3AbirthDate+%3Fbirth+.+%3Fperson+dbpedia-owl%3AdeathDate+%3Fdeath+}+LIMIT+100&format=json&timeout=30000&debug=on"
+---
+
+<table id="one-hundred-table">
+	<thead>
+		<tr>
+		{{#each data.head.vars }}
+			<td>{{ this }}</td>
+		{{/each }}
+		</tr>
+	</thead>
+	<tbody>
+	{{#with data }}
+		{{#each results.bindings }}
+		<tr>
+		{{#each this }}
+			<td>{{ value }}</td>
+		{{/each }}
+		</tr>
+		{{/each }}
+	{{/with }}
+	</tbody>
+</table>

@@ -1,0 +1,6 @@
+title: My Ginger Site
+author: Some Body (somebody@domain.com)
+description: >
+	Write an awesome description for your new project here. You can edit this line in _config.yml. It will appear at the top of the document to give context to the data and in the head meta.
+# Styles: two-col [default], accordion, single-page, tabs
+style: two-col

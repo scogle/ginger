@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 
+<<<<<<< HEAD
 PROJECT = 'ginger'
+=======
+PROJECT = 'SPARQLginger'
+>>>>>>> 4c2d6fc39d593a3461475dff45638363825efcaf
 
 # Change docs/sphinx/conf.py too!
 VERSION = '0.01'
@@ -25,7 +29,7 @@ setup(
     # url = 'https://github.com/dreamhost/cliff',
     # download_url = 'https://github.com/dreamhost/cliff/tarball/master',
 
-    classifiers = ['Development Status :: 3 - Alpha',
+    classifiers=['Development Status :: 3 - Alpha',
                  'License :: OSI Approved :: Apache Software License',
                  'Programming Language :: Python',
                  'Programming Language :: Python :: 2',
@@ -59,7 +63,11 @@ setup(
     # ]},
     include_package_data = True,
 
-    entry_points = {
+    namespace_packages=[],
+    packages=find_packages(),
+    include_package_data=True,
+
+    entry_points={
         'console_scripts': [
             'ginger = ginger.main:main'
         ],
@@ -71,4 +79,4 @@ setup(
     },
 
     #zip_safe=False,
-)
+
