@@ -1,10 +1,10 @@
-=====================
- Running SPARQLginger
-=====================
+===============
+ Running ginger
+===============
 
 NOT EVEN CLOSE TO WORKING YET
 
-SPARQLginger is a utility to generate dynamic HTML sites from SPARQL queries.  Add some spice to your SPARQL!
+ginger is a utility to generate static data site quickly
 
 Usage
 -----
@@ -17,9 +17,7 @@ A typical workflow looks like:
 
 * ginger new
 
-This will generate the structure of your site -- a _config.yml file, a _templates folder and a _site folder where the built site will go.
-
-To add/edit queries, open _config.yml and add a named query to the queries: section
+This will generate the structure of your site -- a _config.yml file, a _views folder and a _site folder where the built site will go.
 
 To rebuild after changes, run 'ginger build'
 

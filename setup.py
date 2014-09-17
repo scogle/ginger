@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-PROJECT = 'SPARQLginger'
+PROJECT = 'ginger'
 
 # Change docs/sphinx/conf.py too!
 VERSION = '0.01'
@@ -13,19 +13,19 @@ except IOError:
     long_description = ''
 
 setup(
-    name=PROJECT,
-    version=VERSION,
+    name = PROJECT,
+    version = VERSION,
 
-    description='Generate dynamic HTML data sites from SPARQL queries',
-    long_description=long_description,
+    description = 'Generate dynamic HTML data sites from SPARQL queries',
+    long_description = long_description,
 
-    author='Scott Ogle',
-    author_email='scott@semanticarts.com',
+    author = 'Scott Ogle',
+    author_email = 'scott@semanticarts.com',
 
-    # url='https://github.com/dreamhost/cliff',
-    # download_url='https://github.com/dreamhost/cliff/tarball/master',
+    # url = 'https://github.com/dreamhost/cliff',
+    # download_url = 'https://github.com/dreamhost/cliff/tarball/master',
 
-    classifiers=['Development Status :: 3 - Alpha',
+    classifiers = ['Development Status :: 3 - Alpha',
                  'License :: OSI Approved :: Apache Software License',
                  'Programming Language :: Python',
                  'Programming Language :: Python :: 2',
@@ -37,38 +37,29 @@ setup(
                  'Environment :: Console',
                  ],
 
-    platforms=['Any'],
+    platforms = ['Any'],
 
-    scripts=[],
+    scripts = [],
 
-    provides=[],
-    install_requires=[
+    provides = [],
+    install_requires = [
         'cliff',
-        'sass',
-        'jinja2'
+        #'sass',
+        'jinja2',
+        'PyYAML'
     ],
 
-    namespace_packages=[],
-    packages=find_packages(),
-    include_package_data=True,
+    #namespace_packages = [],
+    packages = find_packages(),
+    # package_data = {'data':[
+    #     'site_template/*',
+    #     'site_template/lib/*',
+    #     'site_template/scss/*',
+    #     'site_template/views/*'
+    # ]},
+    include_package_data = True,
 
-    # entry_points={
-    #     'console_scripts': [
-    #         'ginger = SPARQLginger.main:main'
-    #     ],
-    #     'cliff.demo': [
-    #         'simple = cliffdemo.simple:Simple',
-    #         'two_part = cliffdemo.simple:Simple',
-    #         'error = cliffdemo.simple:Error',
-    #         'list files = cliffdemo.list:Files',
-    #         'files = cliffdemo.list:Files',
-    #         'file = cliffdemo.show:File',
-    #         'show file = cliffdemo.show:File',
-    #         'unicode = cliffdemo.encoding:Encoding',
-    #     ],
-    # },
-
-    entry_points={
+    entry_points = {
         'console_scripts': [
             'ginger = ginger.main:main'
         ],
@@ -79,5 +70,5 @@ setup(
         ]
     },
 
-    zip_safe=False,
+    #zip_safe=False,
 )

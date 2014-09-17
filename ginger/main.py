@@ -14,9 +14,9 @@ class Ginger(App):
 
     def __init__(self):
         super(Ginger, self).__init__(
-            description='SPARQLGinger - Generate dynamic reports based on SPARQL queries',
+            description='ginger - static sites with dynamic HTML from json endpoints',
             version='0.1',
-            command_manager=CommandManager('Ginger'),
+            command_manager=CommandManager('ginger'),
             )
 
     def initialize_app(self, argv):
