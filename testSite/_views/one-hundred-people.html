@@ -6,6 +6,8 @@ description: Twenty five instances of foaf:Person randomly selected from DBPedia
 endpoint: "http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3Fperson+%3Fbirth+%3Fdeath+where+{%3Fperson+a+foaf%3APerson+.+%3Fperson+dbpedia-owl%3AbirthDate+%3Fbirth+.+%3Fperson+dbpedia-owl%3AdeathDate+%3Fdeath+}+LIMIT+25&format=json&timeout=30000&debug=on"
 ---
 
+alert("Hello, world!");
+
 <table id="one-hundred-table" class="table table-striped">
 	<thead>
 		<tr>
