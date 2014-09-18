@@ -1,0 +1,28 @@
+---
+title: Notable Asteroids
+id: asteroids
+description: Just a bunch of asteroids from wikipedia
+
+endpoint: "http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=SELECT+distinct+%3FName+%3FAbstract+WHERE+{+%3FURI+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FAsteroid%3E+.+%3FURI+rdfs%3Alabel+%3FName+.+%3FURI+dbpedia-owl%3Aabstract+%3FAbstract+}+LIMIT+25&format=json&timeout=30000&debug=on"
+---
+
+<table id="asteroids-table" class="table table-striped">
+	<thead>
+		<tr>
+		{{#each data.head.vars }}
+			<th>{{ this }}</th>
+		{{/each }}
+		</tr>
+	</thead>
+	<tbody>
+	{{#with data }}
+		{{#each results.bindings }}
+		<tr>
+		{{#each this }}
+			<td>{{ value }}</td>
+		{{/each }}
+		</tr>
+		{{/each }}
+	{{/with }}
+	</tbody>
+</table>

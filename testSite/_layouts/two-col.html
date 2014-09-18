@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{ site_data.title }}</title>
+
+	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/handlebars/dist/handlebars-v2.0.0.js"></script>
+  <script type="text/javascript" src="lib/lodash.compat.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <script type="text/javascript">
+var site_json = {{ json_data|safe }}; 
+  </script>
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="col-xs-3">
+        <h1>{{ site_data.title }}</h1>
+        <p>{{ site_data.author }}</p>
+        <p>{{ site_data.description }}</p>
+
+        <nav>
+          <ul class="nav nav-sidebar">
+            {% for view in site_data.views %}
+              <li><a href="#{{ view.id }}">{{ view.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </header>
+
+      <div id="content" class="col-xs-9">
+        {% for view in site_data.views %}
+          <section class="ginger-section" id="{{ view.id }}-section">
+            <h2>{{ view.title }}</h2>
+            <p>{{ view.description }}</p>
+            <script id="{{ view.id }}" type="text/x-handlebars-template">
+              {{ view.template|safe }}
+            </script>
+          </section>
+        {% endfor %}
+      </div>
+      
+    </div>
+  </div>
+  
+
+<script type="text/javascript" src="js/get_data.js"></script>
+</body>
+</html>
