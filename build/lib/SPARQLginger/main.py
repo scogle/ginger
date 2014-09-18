@@ -8,15 +8,16 @@ from urllib2 import Request
 
 import SimpleHTTPServer
 
-class Ginger(App):
+
+class SparqlGinger(App):
 
     log = logging.getLogger(__name__)
 
     def __init__(self):
-        super(Ginger, self).__init__(
+        super(SparqlGinger, self).__init__(
             description='SPARQLGinger - Generate dynamic reports based on SPARQL queries',
             version='0.1',
-            command_manager=CommandManager('Ginger'),
+            command_manager=CommandManager('SparqlGinger'),
             )
 
     def initialize_app(self, argv):
@@ -32,7 +33,7 @@ class Ginger(App):
 
 
 def main(argv=sys.argv[1:]):
-    myapp = Ginger()
+    myapp = SparqlGinger()
     return myapp.run(argv)
 
 

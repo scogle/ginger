@@ -1,4 +1,0 @@
-recursive-include data/*
-recursive-include data/lib/*
-recursive-include data/scss/*
-recursive-include data/views/*

@@ -4,19 +4,16 @@ import sys
 from cliff.app import App
 from cliff.commandmanager import CommandManager
 
-from urllib2 import Request
 
-import SimpleHTTPServer
-
-class Ginger(App):
+class DemoApp(App):
 
     log = logging.getLogger(__name__)
 
     def __init__(self):
-        super(Ginger, self).__init__(
-            description='SPARQLGinger - Generate dynamic reports based on SPARQL queries',
+        super(DemoApp, self).__init__(
+            description='cliff demo app',
             version='0.1',
-            command_manager=CommandManager('Ginger'),
+            command_manager=CommandManager('cliff.demo'),
             )
 
     def initialize_app(self, argv):
@@ -32,7 +29,7 @@ class Ginger(App):
 
 
 def main(argv=sys.argv[1:]):
-    myapp = Ginger()
+    myapp = DemoApp()
     return myapp.run(argv)
 
 
