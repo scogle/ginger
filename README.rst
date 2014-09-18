@@ -23,4 +23,4 @@ This will generate the structure of your site -- a _config.yml file, a _views fo
 
 To rebuild after changes, run 'ginger build'
 
-'ginger serve' will serve the site on a simple HTTP server
+`ginger serve` will serve the site on a simple HTTP server

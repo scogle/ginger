@@ -1,7 +1,7 @@
 section {
   margin-top: 40px;
   padding-top: 40px;
-  border-top: 1px solid #ccc; }
+  border-top: 3px solid #ccc; }
 
 section:first-child {
   margin-top: 0;
@@ -11,3 +11,10 @@ section:first-child {
 .sidebar {
   height: 100%;
   position: fixed; }
+  .sidebar h1 {
+    margin-bottom: 30px; }
+  .sidebar nav {
+    margin-top: 40px;
+    border-top: 1px solid #ccc; }
+    .sidebar nav .nav-sidebar {
+      margin-left: -15px; }

@@ -1,6 +1,17 @@
 // Main
 
-section { margin-top: 40px; padding-top: 40px; border-top: 1px solid #ccc; }
+section { margin-top: 40px; padding-top: 40px; border-top: 3px solid #ccc; }
 section:first-child { margin-top: 0; padding-top: 0; border-top: none; }
 
-.sidebar { height: 100%; position: fixed; }
+.sidebar {
+	height: 100%;
+	position: fixed;
+	h1 { margin-bottom: 30px; }
+	nav {
+		margin-top: 40px;
+		border-top:
+		1px solid #ccc;
+		.nav-sidebar { margin-left: -15px; }
+	}
+
+}
