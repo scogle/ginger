@@ -48,19 +48,9 @@ setup(
         'cliff',
         #'sass',
         'jinja2',
-        'PyYAML'
+        'PyYAML',
+        'PrettyTable'
     ],
-
-    #namespace_packages = [],
-    packages = find_packages(),
-    # package_data = {'data':[
-    #     'site_template/*',
-    #     'site_template/lib/*',
-    #     'site_template/scss/*',
-    #     'site_template/views/*'
-    # ]},
-    include_package_data = True,
-
 
     namespace_packages=[],
     packages=find_packages(),
