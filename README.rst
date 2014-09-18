@@ -2,7 +2,7 @@
  Running ginger
 ===============
 
-NOT EVEN CLOSE TO WORKING YET
+`ginger build` WORKS!
 
 ginger is a utility to generate static data site quickly
 
