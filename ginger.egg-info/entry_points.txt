@@ -1,8 +1,0 @@
-[console_scripts]
-ginger = ginger.main:main
-
-[ginger]
-build = ginger.build:Build
-new = ginger.create:Create
-serve = ginger.serve:Serve
-
