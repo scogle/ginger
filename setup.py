@@ -46,7 +46,7 @@ setup(
     provides = [],
     install_requires = [
         'cliff',
-        #'sass',
+        'sass',
         'jinja2',
         'PyYAML',
         'PrettyTable'
