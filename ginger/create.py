@@ -28,4 +28,4 @@ def get_pkg_path():
 def is_created():
 
     """ Checks to see if ginger new command has already been run on dir """
-    return os.path.isfile(os.getcwd()+'/_config.yml')
+    return os.path.isfile(os.getcwd()+'/_config.yaml')
