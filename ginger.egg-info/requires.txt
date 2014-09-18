@@ -1,4 +1,0 @@
-cliff
-sass
-jinja2
-PyYAML
