@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 
-<<<<<<< HEAD
 PROJECT = 'ginger'
-=======
-PROJECT = 'SPARQLginger'
->>>>>>> 4c2d6fc39d593a3461475dff45638363825efcaf
 
 # Change docs/sphinx/conf.py too!
 VERSION = '0.01'
@@ -17,6 +13,7 @@ except IOError:
     long_description = ''
 
 setup(
+
     name = PROJECT,
     version = VERSION,
 
@@ -28,6 +25,7 @@ setup(
 
     # url = 'https://github.com/dreamhost/cliff',
     # download_url = 'https://github.com/dreamhost/cliff/tarball/master',
+
 
     classifiers=['Development Status :: 3 - Alpha',
                  'License :: OSI Approved :: Apache Software License',
@@ -63,6 +61,7 @@ setup(
     # ]},
     include_package_data = True,
 
+
     namespace_packages=[],
     packages=find_packages(),
     include_package_data=True,
@@ -78,5 +77,6 @@ setup(
         ]
     },
 
-    #zip_safe=False,
 
+    zip_safe=False,
+)
