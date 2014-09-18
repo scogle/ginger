@@ -1,0 +1,46 @@
+Metadata-Version: 1.0
+Name: ginger
+Version: 0.01
+Summary: Generate dynamic HTML data sites from SPARQL queries
+Home-page: UNKNOWN
+Author: Scott Ogle
+Author-email: scott@semanticarts.com
+License: UNKNOWN
+Description: ===============
+         Running ginger
+        ===============
+        
+        `ginger build` WORKS!
+        
+        ginger is a utility to generate static data site quickly
+        
+        
+        Usage
+        -----
+        
+        A typical workflow looks like:
+        
+        * mkdir myGingerSite
+        
+        * cd myGingerSite
+        
+        * ginger new
+        
+        This will generate the structure of your site -- a _config.yml file, a _views folder and a _site folder where the built site will go.
+        
+        
+        To rebuild after changes, run 'ginger build'
+        
+        'ginger serve' will serve the site on a simple HTTP server
+        
+Platform: Any
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console

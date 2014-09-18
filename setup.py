@@ -46,25 +46,21 @@ setup(
     provides = [],
     install_requires = [
         'cliff',
-        #'sass',
+        'sass',
         'jinja2',
         'PyYAML'
     ],
 
-    #namespace_packages = [],
     packages = find_packages(),
+
     # package_data = {'data':[
     #     'site_template/*',
     #     'site_template/lib/*',
     #     'site_template/scss/*',
     #     'site_template/views/*'
     # ]},
+
     include_package_data = True,
-
-
-    namespace_packages=[],
-    packages=find_packages(),
-    include_package_data=True,
 
     entry_points={
         'console_scripts': [

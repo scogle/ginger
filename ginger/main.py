@@ -1,12 +1,12 @@
 import logging
 import sys
+import SimpleHTTPServer
 
 from cliff.app import App
 from cliff.commandmanager import CommandManager
 
 from urllib2 import Request
 
-import SimpleHTTPServer
 
 class Ginger(App):
 
@@ -14,7 +14,7 @@ class Ginger(App):
 
     def __init__(self):
         super(Ginger, self).__init__(
-            description='ginger - static sites with dynamic HTML from json endpoints',
+            description='ginger - Generate static sites with dynamic HTML from json endpoints',
             version='0.1',
             command_manager=CommandManager('ginger'),
             )
@@ -32,6 +32,7 @@ class Ginger(App):
 
 
 def main(argv=sys.argv[1:]):
+    print argv
     myapp = Ginger()
     return myapp.run(argv)
 
