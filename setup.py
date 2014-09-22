@@ -48,8 +48,7 @@ setup(
         'cliff',
         'sass',
         'jinja2',
-        'PyYAML',
-        'PrettyTable'
+        'PyYAML'
     ],
 
     namespace_packages=[],

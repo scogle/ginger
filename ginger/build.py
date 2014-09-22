@@ -15,8 +15,16 @@ class Build(Command):
 
 	log = logging.getLogger(__name__)
 
+	def get_parser(self, prog_name):
+		parser = super(Build, self).get_parser(prog_name)
+		parser.add_argument('-w', '--watch', dest='watch', action='store_true')
+		return parser
+
+
 	def take_action(self, parsed_args):
 		self.app.stdout.write('Building ginger site...\n')
+
+		print "Watch for changes? %s" % parsed_args.watch 
 
 		current_directory = os.getcwd()
 
