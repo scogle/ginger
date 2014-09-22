@@ -30,12 +30,9 @@ class Ginger(App):
         if err:
             self.log.debug('got an error: %s', err)
 
-
 def main(argv=sys.argv[1:]):
-    print argv
     myapp = Ginger()
     return myapp.run(argv)
-
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv[1:]))

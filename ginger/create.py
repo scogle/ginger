@@ -10,8 +10,10 @@ class Create(Command):
 
     def take_action(self, parsed_args):
         if is_created():
-            self.app.stdout.write('It appears create has already '
-                                      'been run on this directory\n')
+            self.app.stdout.write('Error: It appears there is already '
+                                  'a ginger site in this directory.\n'
+                                  'To create a new site, delete '
+                                  '_config.yaml and rerun ginger new\n')
         else:
             self.app.stdout.write('Creating ginger site...\n')
             curr_dir = os.getcwd()
@@ -28,4 +30,4 @@ def get_pkg_path():
 def is_created():
 
     """ Checks to see if ginger new command has already been run on dir """
-    return os.path.isfile(os.getcwd()+'/_config.yml')
+    return os.path.isfile(os.getcwd()+'/_config.yaml')
