@@ -13,7 +13,6 @@ To get started, just
 ```shell
 $ cd some-project-directory
 $ ginger new
-
 ```
 
 This will create the barebones project template, which consists of:
