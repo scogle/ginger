@@ -1,10 +1,8 @@
 import logging
 import os
-import shutil
 import sys
 import yaml
 import re
-import pickle
 import sass
 import json
 
