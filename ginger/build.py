@@ -1,6 +1,7 @@
 import logging
 import os
 import shutil
+import sys
 import yaml
 import re
 import pickle
@@ -33,10 +34,17 @@ class Build(Command):
 
 		env = Environment(loader=FileSystemLoader(layouts_directory), autoescape=False)
 
-		stream = open(current_directory+'/_config.yaml', 'r')
-		_config = yaml.load(stream)
 
-		site_data = {
+		try:
+                    stream = open(current_directory+'/_config.yaml', 'r')
+		    _config = yaml.load(stream)
+                except IOError:
+                    self.app.stdout.write('No _config.yaml file found. Unable'
+                                          ' to build site.\n Please run ginger'
+                                          ' new in order to create site.\n')
+                    sys.exit(1)
+
+                site_data = {
 			'title': _config['title'],
 			'author': _config['author'],
 			'description': _config['description'],
