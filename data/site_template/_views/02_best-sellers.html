@@ -1,0 +1,56 @@
+---
+title: An Example Data View
+id: best-sellers
+description: The table below shows the top five books on the hardcover fiction list from the New York Times.  To see how simple tables can be created, look at this template in <code>_views/best-sellers.html</code>.  This data is stored locally in the <code>_data</code> folder.
+
+# Data source can be either local (like below) or a remote json endpoint
+data_source: "/_data/nytimes_best_sellers.json"
+---
+
+<table id="books-table" class="table table-striped">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Previously</th>
+            <th>Title</th>
+            <th>Publisher</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+     <tfoot>
+        <tr><td colspan="4">{{ data.copyright }}</td></tr>
+    </tfoot>
+    <tbody>
+        {{#each data.results }}
+            <tr>
+                <td>{{ rank }}</td>
+                <td>{{ rank_last_week }}</td>
+                <td><em><a href="{{ book_details.[0].amazon_product_url }}">{{ book_details.[0].title }}</a></em></td>
+                <td>{{ book_details.[0].publisher }}</td>
+                <td>{{ book_details.[0].description }}</td>
+            </tr>
+        {{/each }}
+    </tbody>
+</table>
+
+
+<br />
+<hr />
+
+<p>For ginger to work properly, each view has to start with 'front matter'.  (If you've used Jekyll you already know how it goes.)  Basically, each view needs to start with a section like:</p>
+
+<pre><code>---
+title: Top 5 Current NYTimes Best Sellers
+id: best-sellers
+description: The hardcover fiction list from the New York Times.
+data_source: "/_data/nytimes_best_sellers.json"
+---
+</code></pre>
+
+<p>(The <code>---</code> are <strong>required</strong> before and after after your front matter)</p>
+
+<p>After that, add your template to display your data.  Take at look at this file in <code>_views/02_best-sellers.html</code> to see it in action.</p>  Ginger views use a template language called <a href="http://handlebarsjs.com/">Handlebars</a> to display data.  As a handy utility, we've also included <a href="https://github.com/elving/swag">Swag</a> by default.  Swag is a collection of super useful template helpers to use in constructing views.  Yeeeahhh!</p>
+
+<p>Once you've finished editing the view, run <code>ginger build</code> to generate your new site! Whoa! Or run <code>ginger serve</code> to build it and serve it locally! Even cooler!</p> 
+
+<p><b>Note</b> - If you're using local data sources (ie, files stored in the <code>_data</code> directory) you will probably need to use <code>ginger serve</code> to prevent cross-site-origin-policy errors in your browser.</p>

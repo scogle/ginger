@@ -1,5 +1,4 @@
-title: Ginger Demo
+title: Ginger
 author: Your Name (name@domain.com)
-description: "Examples to show the features available in ginger"
-# Styles: two-col [default], accordion, single-page, tabs
+description: "Welcome to your brand new Ginger site.  Edit this description in the <code>_config.yaml</code> file."
 style: two-col

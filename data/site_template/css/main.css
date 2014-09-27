@@ -1,18 +1,24 @@
+body {
+  padding-bottom: 50px; }
+
 section {
-  margin-top: 40px;
+  margin-top: 60px;
   padding-top: 40px;
   border-top: 3px solid #ccc; }
-
-section:first-child {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none; }
+  section p {
+    margin: 20px 0; }
+  section:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none; }
 
 .sidebar {
   height: 100%;
   position: fixed; }
   .sidebar h1 {
     margin-bottom: 30px; }
+  .sidebar p {
+    margin: 20px 0; }
   .sidebar nav {
     margin-top: 40px;
     border-top: 1px solid #ccc; }
