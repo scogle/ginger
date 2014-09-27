@@ -3,17 +3,17 @@ import logging
 from cliff.command import Command
 import SimpleHTTPServer
 import SocketServer
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
+# from watchdog.observers import Observer
+# from watchdog.events import FileSystemEventHandler
 
 PORT = 4000
 
-class EventHandler(FileSystemEventHandler):
-	"""Extending the watchdog FileSystemEventHandler class to  rebuild on watch
-	"""
+# class EventHandler(FileSystemEventHandler):
+# 	"""Extending the watchdog FileSystemEventHandler class to  rebuild on watch
+# 	"""
 
-	def on_any_event(event, app):
-		print "firing event handler"
+# 	def on_any_event(event, app):
+# 		print "firing event handler"
 
 class Serve(Command):
 	"""Build the site and create a server to serve it
